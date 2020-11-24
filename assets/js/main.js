@@ -184,14 +184,14 @@ xhttp.onreadystatechange = function() {
        console.log('Mail Sent Success');
     }
 };
-xhttp.open("GET", "http://localhost:3000/api/v1/mail?email=" + email + "&" + "body=" + comment + "&" + "name=" + name + "&" + "custemail=" + custEmail + "&" + "number=" + phone, true);
+xhttp.open("GET", "http://api.propnspace.com/api/v1/mail?email=" + email + "&" + "body=" + comment + "&" + "name=" + name + "&" + "custemail=" + custEmail + "&" + "number=" + phone, true);
 xhttp.send();
   
 }
 
 function getSingleProperty(id) {
   var xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "http://localhost:3000/api/v1/property/get/" + parseInt(id), true);
+  xhttp.open("GET", "http://api.propnspace.com/api/v1/property/get/" + parseInt(id), true);
   xhttp.send();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
@@ -203,7 +203,7 @@ function getSingleProperty(id) {
 
 function getTopThreeProperties() {
   var xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "http://localhost:3000/api/v1/property/all", true);
+  xhttp.open("GET", "http://api.propnspace.com/api/v1/property/all", true);
   xhttp.send();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
@@ -215,7 +215,7 @@ function getTopThreeProperties() {
 
 function getPropertiesByType(type) {
   var xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "http://localhost:3000/api/v1/property/type/" + type, true);
+  xhttp.open("GET", "http://api.propnspace.com/api/v1/property/type/" + type, true);
   xhttp.send();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
