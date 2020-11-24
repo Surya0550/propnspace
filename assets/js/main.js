@@ -351,11 +351,11 @@ function indexFunc(values) {
 }
 
 function redirectAndSet() {
-  location.href = `C:/Projects/PropNSpace/property-single.html`;
+  location.href = `${location.origin}/property-single.html`;
 }
 
 function redirectAndSetGrid() {
-  location.href = `C:/Projects/PropNSpace/property-grid.html`;
+  location.href = `${location.origin}/property-grid.html`;
 }
 
 function setValues() {
