@@ -144,7 +144,7 @@
             <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" onclick="redirectToGrid('none')" style="cursor: pointer;">Properties</a>
+            <a class="nav-link" onclick="redirectToGrid('Pre-launch')" style="cursor: pointer;">Pre-Launch</a>
           </li>
           <!--<li class="nav-item">
             <a class="nav-link" href="blog-grid.html">Blog</a>
@@ -161,21 +161,52 @@
               <a class="dropdown-item" onclick="redirectToGrid('none')" style="cursor: pointer;">All</a>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
         </ul>
       </div>
+      &nbsp;&nbsp;&nbsp;
+      <span style="float: right;">Email: propnspace@gmail.com<br>Phone: +91 63046 60016</span>
       <!-- <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
         <span class="fa fa-search" aria-hidden="true"></span>
       </button> -->
     </div>
+    <a class="nav-link justify-content-end" href="contact.html">Contact Us</a>
   </nav><!-- End Header/Navbar -->
-
+  <div class="col-md-12 col-lg-4 floater">
+    <div class="property-contact" style="margin-top: 5%;">
+      <div style="text-align: center;margin-bottom: 5%; font-weight: bold;">Contact Us</div>
+      <form class="form-a">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <input type="text" class="form-control form-control-lg form-control-a" id="inputName" placeholder="Name *" required>
+            </div>
+          </div><br>
+          <div class="col-md-12">
+            <div class="form-group">
+              <input type="email" class="form-control form-control-lg form-control-a" id="inputEmail1" placeholder="Email ">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <input type="number" class="form-control form-control-lg form-control-a" id="inputNumber" placeholder="Phone Number *" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <textarea id="textMessage" class="form-control" placeholder="Requirement *" name="message" cols="45" rows="8" required></textarea>
+            </div>
+          </div><br>
+        </div>
+        <div class="col-md-2" style="margin-bottom: 5%; text-align: center; margin-left: 15%;">
+          <button type="submit" class="btn btn-c" onclick="sendMail()">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
   <!-- ======= Intro Section ======= -->
   <div class="intro intro-carousel">
     <div id="carousel" class="owl-carousel owl-theme">
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url(assets/img/vasavi_lake_city_normal.jpeg)">
+      <div class="carousel-item-a intro-item bg-image" style="background-image: url(assets/img/11.jpg)">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -183,14 +214,11 @@
               <div class="row">
                 <div class="col-lg-8">
                   <div class="intro-body">
-                    <p class="intro-title-top">Hafeezpet, Hyderabad
-                      <br> 500049</p>
-                    <h1 class="intro-title mb-4">
-                      <span class="color-b">1 </span> VASAVI
-                      <br> LAKE CITY</h1>
-                    <p class="intro-subtitle intro-price">
-                      <a value="vasavi" id="1" style="cursor: pointer;" onclick="indexFunc(this)"><span class="price-a"><!--rent | $ 12.000-->EXPLORE</span></a>
-                    </p>
+                    <h1 class="intro-title">
+                      Welcome to propnspace</h1>
+                    <!-- <p class="intro-subtitle intro-price">
+                      <a value="vasavi" id="1" style="cursor: pointer;" onclick="indexFunc(this)"><span class="price-a">rent | $ 12.000EXPLORE</span></a>
+                    </p> -->
                   </div>
                 </div>
               </div>
@@ -206,14 +234,11 @@
               <div class="row">
                 <div class="col-lg-8">
                   <div class="intro-body">
-                    <p class="intro-title-top">Manikonda, Hyderabad
-                      <br> 500089</p>
                     <h1 class="intro-title mb-4">
-                      <span class="color-b">2 </span> AMBIENCE
-                      <br> COURTYARD</h1>
-                    <p class="intro-subtitle intro-price">
-                      <a value="ambience" id="2" style="cursor: pointer;" onclick="indexFunc(this)"><span class="price-a">EXPLORE</span></a>
-                    </p>
+                      Your Property Search Ends Here</h1>
+                    <!-- <p class="intro-subtitle intro-price">
+                      <a value="vasavi" id="1" style="cursor: pointer;" onclick="indexFunc(this)"><span class="price-a">rent | $ 12.000EXPLORE</span></a>
+                    </p> -->
                   </div>
                 </div>
               </div>
@@ -221,7 +246,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url(assets/img/Main_entrance_hallmark.png)">
+      <div class="carousel-item-a intro-item bg-image" style="background-image: url(assets/img/Villas_pic.png)">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -229,14 +254,12 @@
               <div class="row">
                 <div class="col-lg-8">
                   <div class="intro-body">
-                    <p class="intro-title-top">Kollur, Hyderabad
-                      <br> 502300</p>
                     <h1 class="intro-title mb-4">
-                      <span class="color-b">3 </span> HALLMARK
-                      <br> VESTA</h1>
-                    <p class="intro-subtitle intro-price">
-                      <a value="hallmark" id="3" style="cursor: pointer;" onclick="indexFunc(this)"><span class="price-a">EXPLORE</span></a>
-                    </p>
+                      The best choice for your home
+                    </h1>
+                    <!-- <p class="intro-subtitle intro-price">
+                      <a value="vasavi" id="1" style="cursor: pointer;" onclick="indexFunc(this)"><span class="price-a">rent | $ 12.000EXPLORE</span></a>
+                    </p> -->
                   </div>
                 </div>
               </div>
@@ -250,7 +273,7 @@
   <main id="main">
 
     <!-- ======= Services Section ======= -->
-    <!--<section class="section-services section-t8">
+    <section class="section-services section-t8">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -264,79 +287,115 @@
         <div class="row">
           <div class="col-md-4">
             <div class="card-box-c foo">
-              <div class="card-header-c d-flex">
-                <div class="card-box-ico">
-                  <span class="fa fa-gamepad"></span>
-                </div>
-                <div class="card-title-c align-self-center">
-                  <h2 class="title-c">Lifestyle</h2>
-                </div>
-              </div>
-              <div class="card-body-c">
-                <p class="content-c">
-                  Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                  convallis a pellentesque
-                  nec, egestas non nisi.
-                </p>
-              </div>
-              <div class="card-footer-c">
-                <a href="#" class="link-c link-icon">Read more
-                  <span class="ion-ios-arrow-forward"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card-box-c foo">
-              <div class="card-header-c d-flex">
-                <div class="card-box-ico">
-                  <span class="fa fa-usd"></span>
-                </div>
-                <div class="card-title-c align-self-center">
-                  <h2 class="title-c">Loans</h2>
-                </div>
-              </div>
-              <div class="card-body-c">
-                <p class="content-c">
-                  Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Mauris blandit
-                  aliquet elit, eget tincidunt
-                  nibh pulvinar a.
-                </p>
-              </div>
-              <div class="card-footer-c">
-                <a href="#" class="link-c link-icon">Read more
-                  <span class="ion-ios-arrow-forward"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card-box-c foo">
-              <div class="card-header-c d-flex">
+              <!-- <div class="card-header-c d-flex">
                 <div class="card-box-ico">
                   <span class="fa fa-home"></span>
                 </div>
                 <div class="card-title-c align-self-center">
                   <h2 class="title-c">Sell</h2>
                 </div>
+              </div> -->
+              <img src="assets/img/vasavi_lake_city_normal.jpeg" alt="..." class="img-thumbnail">
+              <div class="card-title-c align-self-center" style="text-align: center;">
+                <h2 class="title-c">Pre-launch</h2>
               </div>
               <div class="card-body-c">
                 <p class="content-c">
-                  Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                  convallis a pellentesque
-                  nec, egestas non nisi.
+                  Buy best <b>Group Deal</b> offers from top builders especially for Investors.
                 </p>
               </div>
               <div class="card-footer-c">
-                <a href="#" class="link-c link-icon">Read more
+                <a onclick="redirectToGrid('Pre-launch')" style="cursor: pointer;" class="link-c link-icon">Read more
                   <span class="ion-ios-arrow-forward"></span>
                 </a>
               </div>
             </div>
           </div>
+          <div class="col-md-4">
+            <div class="card-box-c foo">
+              <!-- <div class="card-header-c d-flex">
+                <div class="card-box-ico">
+                  <span class="fa fa-home"></span>
+                </div>
+                <div class="card-title-c align-self-center">
+                  <h2 class="title-c">Sell</h2>
+                </div>
+              </div> -->
+              <img src="assets/img/3.png" alt="..." class="img-thumbnail" width="320" height="1">
+              <div class="card-title-c align-self-center" style="text-align: center;">
+                <h2 class="title-c">Residential</h2>
+              </div>
+              <div class="card-body-c">
+                <p class="content-c">
+                  Buy Premium Residential Gated Community apartments from top builders in Hyderabad.
+                </p>
+              </div>
+              <div class="card-footer-c">
+                <a onclick="redirectToGrid('Residential')" style="cursor: pointer;" class="link-c link-icon">Read more
+                  <span class="ion-ios-arrow-forward"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-box-c foo">
+              <!-- <div class="card-header-c d-flex">
+                <div class="card-box-ico">
+                  <span class="fa fa-home"></span>
+                </div>
+                <div class="card-title-c align-self-center">
+                  <h2 class="title-c">Sell</h2>
+                </div>
+              </div> -->
+              <img src="assets/img/Villa1.png" alt="..." class="img-thumbnail">
+              <div class="card-title-c align-self-center" style="text-align: center;">
+                <h2 class="title-c">Villas</h2>
+              </div>
+              <div class="card-body-c">
+                <p class="content-c">
+                  Buy best Simplex, Duplex, Triplex Villas at premium locations in Hyderabad.
+                </p>
+              </div>
+              <div class="card-footer-c">
+                <a onclick="redirectToGrid('Villa')" style="cursor: pointer;" class="link-c link-icon">Read more
+                  <span class="ion-ios-arrow-forward"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img src="assets/img/vasavi_lake_city_normal.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img src="assets/img/vasavi_lake_city_normal.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img src="assets/img/vasavi_lake_city_normal.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div> -->
         </div>
       </div>
-    </section>--><!-- End Services Section -->
+    </section><!-- End Services Section -->
 
     <!-- ======= Latest Properties Section ======= -->
     <section class="section-property section-t8">
@@ -461,7 +520,7 @@
     </section>End Latest News Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <!-- <section class="section-testimonials section-t8 nav-arrow-a">
+    <section class="section-testimonials section-t8 nav-arrow-a">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -478,7 +537,7 @@
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <div class="testimonial-img">
-                    <img src="assets/img/testimonial-1.jpg" alt="" class="img-fluid">
+                    <img src="assets/img/testimonials-sample.png" alt="" class="img-fluid">
                   </div>
                 </div>
                 <div class="col-sm-12 col-md-6">
@@ -487,14 +546,12 @@
                   </div>
                   <div class="testimonials-content">
                     <p class="testimonial-text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
-                      debitis hic ber quibusdam
-                      voluptatibus officia expedita corpori.
+                      It was such a pleasure working with propnspace team who seemed to have all the answers for property related queries. propnspace team helped me to find a new house in Hyderabad as I am staying away from India. Thanks to the entire team, I would highly recommend propnspace for everyone!
                     </p>
                   </div>
                   <div class="testimonial-author-box">
-                    <img src="assets/img/mini-testimonial-1.jpg" alt="" class="testimonial-avatar">
-                    <h5 class="testimonial-author">Albert & Erika</h5>
+                    <!-- <img src="assets/img/testimonials-sample.png" alt="" class="testimonial-avatar"> -->
+                    <h5 class="testimonial-author">Surya</h5>
                   </div>
                 </div>
               </div>
@@ -505,7 +562,7 @@
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <div class="testimonial-img">
-                    <img src="assets/img/testimonial-2.jpg" alt="" class="img-fluid">
+                    <img src="assets/img/testimonials-sample.png" alt="" class="img-fluid">
                   </div>
                 </div>
                 <div class="col-sm-12 col-md-6">
@@ -514,14 +571,12 @@
                   </div>
                   <div class="testimonials-content">
                     <p class="testimonial-text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
-                      debitis hic ber quibusdam
-                      voluptatibus officia expedita corpori.
+                      propnspace helped me in shortlisting the properties as per my budget and recommendations. Team was in constant touch with me for arranging site visits & also giving current updates which helped me and my family to ultimately finalize and select the best property from available list of properties. Thanks a lot to propnspace team.
                     </p>
                   </div>
                   <div class="testimonial-author-box">
-                    <img src="assets/img/mini-testimonial-2.jpg" alt="" class="testimonial-avatar">
-                    <h5 class="testimonial-author">Pablo & Emma</h5>
+                    <!-- <img src="assets/img/testimonials-sample.png" alt="" class="testimonial-avatar"> -->
+                    <h5 class="testimonial-author">Aravind (IT Professional)</h5>
                   </div>
                 </div>
               </div>
@@ -529,10 +584,18 @@
           </div>
         </div>
       </div>
-    </section>End Testimonials Section -->
+    </section><!-- End Testimonials Section -->
 
   </main><!-- End #main -->
-
+  <a  class="whats-app" href="https://api.whatsapp.com/send/?phone=916304660016&text=Welcome%20to%20Propnspace&app_absent=0" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+  </a>
+  <a href="https://www.facebook.com/propnspace" target="_blank" class="fb">
+    <i class="fa fa-facebook my-float" aria-hidden="true"></i>
+  </a>
+  <a href="https://instagram.com/propnspace" target="_blank" class="insta">
+    <i class="fa fa-instagram my-float" aria-hidden="true"></i>
+  </a>
   <!-- ======= Footer ======= -->
   <section class="section-footer">
     <div class="container">
@@ -553,7 +616,7 @@
                 <a href="about.html">About</a>
               </li>
               <li class="list-inline-item">
-                <a href="property-grid.html">Properties</a>
+                <a onclick="redirectToGrid('none')" style="cursor: pointer; color: #000;">Properties</a>
               </li>
               <li class="list-inline-item">
                 <a href="contact.html">Contact</a>
@@ -568,12 +631,12 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                <a href="https://api.whatsapp.com/send/?phone=916304660016&text=Welcome%20to%20Propnspace&app_absent=0">
+                  <i class="fa fa-whatsapp" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.instagram.com/propnspace">
                   <i class="fa fa-instagram" aria-hidden="true"></i>
                 </a>
               </li>
@@ -582,7 +645,7 @@
           <div class="copyright-footer">
             <p class="copyright color-text-a">
               &copy; Copyright
-              <span class="color-a">PropNSpace</span> All Rights Reserved.
+              <span class="color-a">propnspace</span> All Rights Reserved.
             </p>
           </div>
         </div>

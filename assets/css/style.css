@@ -561,7 +561,7 @@ a:hover {
   transition: .5s ease;
 }
 
-.btn.btn-a, .btn.btn-b {
+.btn.btn-a, .btn.btn-b .btn.btn-c{
   border-radius: 0;
   padding: 1rem 3rem;
   letter-spacing: .05rem;
@@ -572,7 +572,18 @@ a:hover {
   color: #ffffff;
 }
 
+.btn.btn-c {
+  background-color: #ffffff;
+  color: #000000;
+  align-self: center;
+}
+
 .btn.btn-a:hover {
+  background-color: #2eca6a;
+  color: #000000;
+}
+
+.btn.btn-c:hover {
   background-color: #2eca6a;
   color: #000000;
 }
@@ -1045,9 +1056,10 @@ a:hover {
 .intro .intro-title {
   transition-duration: 9s !important;
   color: #ffffff;
-  font-weight: 700;
-  font-size: 2.8rem;
+  font-weight: 300;
+  font-size: 1.8rem;
   text-transform: uppercase;
+  text-align: center;
 }
 
 @media (min-width: 576px) {
@@ -1667,7 +1679,7 @@ a:hover {
 .title-c {
   font-size: 2.5rem;
   font-weight: 600;
-  margin-left: -40px;
+  /* margin-left: -40px; */
 }
 
 @media (min-width: 768px) {
@@ -2159,3 +2171,93 @@ footer .copyright-footer {
 footer .credits {
   font-size: 14px;
 }
+
+.floater {
+  position: fixed;
+  background-color: white;
+  border-radius: 15px;
+  top: 20%;
+  right: 0;
+  /* height: 40px; */
+  width: 15%;
+  z-index: 10;
+}
+
+@media screen and (max-width: 856px) {
+  .floater {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.insta {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 40px;
+  /* background-color: #25d366; */
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 3px 4px 3px #999;
+  left: 15px;
+  z-index: 100;
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.insta:hover {
+  color: white;
+}
+
+.fb {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 100px;
+  background: linear-gradient(#007EFF 0%, #00A3FF 50%, #00C5FF 100%);
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 3px 4px 3px #999;
+  left: 15px;
+  z-index: 100;
+}
+
+.fb:hover {
+  color: white;
+}
+
+.whats-app {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 160px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 3px 4px 3px #999;
+  left: 15px;
+  z-index: 100;
+}
+
+.whats-app:hover {
+  color: white;
+}
+
+.my-float {
+  margin-top: 10px;
+}
+
+/* .card-img-top {
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+} */

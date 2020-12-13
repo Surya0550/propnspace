@@ -149,7 +149,7 @@
     animateOut: 'fadeOut',
     animateIn: 'fadeInUp',
     navText: ['<i class="ion-ios-arrow-back" aria-hidden="true"></i>', '<i class="ion-ios-arrow-forward" aria-hidden="true"></i>'],
-    autoplayTimeout: 4000,
+    autoplayTimeout: 10000,
     autoplayHoverPause: true,
     responsive: {
       0: {
@@ -291,6 +291,7 @@ function gridFunc() {
         let singleAttrArray = [];
         let attrCounter = 0;
         setTimeout(function () {
+          document.getElementById('property-grid-heading').innerHTML = sessionStorage.getItem('redirectType') + ' Properties';
           for (let i = 0; i < propertyByTypeResponse.length; i++) {
             $("#gridP").append(`<div class="col-md-4">            <div class="card-box-a card-shadow">              <div class="img-box-a">                <img src="${baseUrl}${propertyByTypeResponse[i].image}" alt="" style="object-fit:cover; width:500px; height:500px;" class="img-a img-fluid">              </div>              <div class="card-overlay">                <div class="card-overlay-a-content">                  <div class="card-header-a">                    <h2 class="card-title-a">                      <span>${propertyByTypeResponse[i].name}                        </span>                    </h2>                  </div>                  <div class="card-body-a">                    <div class="price-box d-flex">                      <span class="price-a">COST</span>                    </div>                    <a value="redirect" id="${propertyByTypeResponse[i].id}" onclick="indexFunc(this)" class="link-a" style="cursor: pointer; color: white;" >Click here to view                      <span class="ion-ios-arrow-forward"></span>                    </a>                  </div>                  <div class="card-footer-a">                    <ul class="card-info d-flex justify-content-around" id="attr_elsegrid${i}">                      </ul>                  </div>                </div>              </div>            </div>          </div>`);
             if (propertyByTypeResponse[i].attributes) {
@@ -351,13 +352,17 @@ function indexFunc(values) {
 }
 
 function redirectAndSet() {
-  location.href = `${location.origin}/property-single.html`;
-  // location.href = `C:/Projects/PropNSpace - Copy/property-single.html`;
+  // location.href = `${location.origin}/property-single.html`;
+  location.href = `C:/Projects/PropNSpace - Copy/property-single.html`;
 }
 
 function redirectAndSetGrid() {
-  location.href = `${location.origin}/property-grid.html`;
-  // location.href = `C:/Projects/PropNSpace - Copy/property-grid.html`;
+  // location.href = `${location.origin}/property-grid.html`;
+  location.href = `C:/Projects/PropNSpace - Copy/property-grid.html`;
+}
+
+function redirectToLocation(value) {
+  location.href = value;
 }
 
 function setValues() {
@@ -380,6 +385,8 @@ function setValues() {
         singleAttrArray = attrArray[i].split(':');
         $("#attributes").append(`<li class="d-flex justify-content-between"> <strong>${singleAttrArray[0]}:</strong> <span>${singleAttrArray[1]}</span> </li>`);
       }
+      // alert(parsedResponse.location);
+      $("#attributes").append(`<li class="d-flex justify-content-between"> <strong>Location:</strong> <a onclick="redirectToLocation('${parsedResponse.location}')" style="cursor: pointer;">Click here</a> </li>`)
     });
     document.getElementById('p_name').innerHTML = parsedResponse.name;
     document.getElementById('p_add').innerHTML = parsedResponse.address;
@@ -390,7 +397,7 @@ function setValues() {
     document.getElementById('p_status').innerHTML = parsedResponse.status;
     // document.getElementById('p_area').innerHTML = parsedResponse.area;
     document.getElementById('p_des_1').innerHTML = parsedResponse.description;
-    document.getElementById('gmap').src = `https://maps.google.com/maps?q=${parsedResponse.name}&output=embed`;
+    // document.getElementById('p_loc').value = parsedResponse.location;
     document.getElementById('img1').src = `https://propnspace.s3.ap-south-1.amazonaws.com/${parsedResponse.image}`;
     document.getElementById('brochure').href = `https://propnspace.s3.ap-south-1.amazonaws.com/${parsedResponse.brochure}`;
     $('#property-single-carousel').owlCarousel({
