@@ -352,13 +352,13 @@ function indexFunc(values) {
 }
 
 function redirectAndSet() {
-  // location.href = `${location.origin}/property-single.html`;
-  location.href = `C:/Projects/PropNSpace - Copy/property-single.html`;
+  location.href = `${location.origin}/property-single.html`;
+  // location.href = `C:/Projects/PropNSpace - Copy/property-single.html`;
 }
 
 function redirectAndSetGrid() {
-  // location.href = `${location.origin}/property-grid.html`;
-  location.href = `C:/Projects/PropNSpace - Copy/property-grid.html`;
+  location.href = `${location.origin}/property-grid.html`;
+  // location.href = `C:/Projects/PropNSpace - Copy/property-grid.html`;
 }
 
 function redirectToLocation(value) {
