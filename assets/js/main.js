@@ -165,16 +165,25 @@ let topThreeResponse;
 let propertyByTypeResponse;
 let topThreeArray  = [];
 
-function sendMail() {
+function sendMail(page) {
 
   // if(value === 'contact') {
   //   // alert('Call came from contact');
   // }
+ let pageDetails;
+  if(page == 'home') {
+    pageDetails = '\nCustomer given input from Home Page';
+  } else if(page == 'property') {
+    pageDetails = '\nCustomer given input from the property: ' + document.getElementById('p_name').innerHTML;
+  } else {
+    pageDetails = '\nCustomer given input from Contact Page';
+  }
+  
 
   let name = document.getElementById('inputName').value;
-  let email = 'sai.suryateja14@gmail.com|pramodpoli@gmail.com|sruthiswamy18@gmail.com';
+  let email = 'sai.suryateja14@gmail.com|pramodpoli@gmail.com|sruthiswamy18@gmail.com|propnspace@outlook.com';
   let custEmail = document.getElementById('inputEmail1').value;
-  let comment = document.getElementById('textMessage').value;
+  let comment = document.getElementById('textMessage').value + pageDetails;
   let phone = document.getElementById('inputNumber').value;
 
   var xhttp = new XMLHttpRequest();
